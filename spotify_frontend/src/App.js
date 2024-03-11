@@ -5,7 +5,6 @@ import SignUp from './routes/SignUp';
 import Home from './routes/Home';
 
 import { useEffect, useState } from 'react';
-
 import LikedSongs from './routes/LikedSongs';
 import Library from './routes/Library';
 

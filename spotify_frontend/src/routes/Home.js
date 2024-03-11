@@ -55,7 +55,7 @@ const Home = ({ setToken }) => {
     return (
         <div className="h-screen w-screen flex">
             {/* Left Sidebar */}
-            <div className="damn bg-black flex flex-col justify-between h-full w-1/5 md:w-1/4 lg:w-1/6 ">
+            <div className="damn bg-black flex flex-col justify-between h-full w-1/5 sm:w-1/4 md:w-1/6 lg:w-1/5">
                 <div>
                     <div className='logo px-5 py-7'>
                         <Icon icon="logos:spotify" width="150" />
@@ -191,7 +191,7 @@ const Card = ({ title, description, imgUrl, songplay }) => {
             <div className='flex w-full justify-between h-20 mt-3'>
                 <div className='justify-start ml-3 cursor-pointer' onClick={async function () { setLike(!like)
 
-                    const res = await axios.put('https://sonags-backend.onrender.com/addsong', {
+                    const res = await axios.put('http://localhost:8000/addsong', {
                         songname: title,
                         thumbnail: imgUrl,
                         likes: description,
