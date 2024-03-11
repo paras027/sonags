@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import Login from './routes/Login';
 import SignUp from './routes/SignUp';
 import Home from './routes/Home';
-import Cookies from 'js-cookie';
+
 import { useEffect, useState } from 'react';
-import AddSongs from './routes/AddSongs';
-import Search from './routes/Search';
+
 import LikedSongs from './routes/LikedSongs';
 import Library from './routes/Library';
 
