@@ -20,7 +20,7 @@ const Library = ({ setToken }) => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await axios.get('http://localhost:8000/getlikedsongs', {
+            const response = await axios.get('https://sonags-backend.onrender.com/getlikedsongs', {
                 headers: {
                     'Authorization': token
                 }
