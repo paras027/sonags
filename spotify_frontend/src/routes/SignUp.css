@@ -1,0 +1,8 @@
+.FullWindow {
+    max-width: 450px;
+    width: 50%;
+}
+
+hover:a {
+    text-color: #1ed760
+}

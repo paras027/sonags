@@ -1,0 +1,15 @@
+.inputRegion {
+    max-width: 732px;
+}
+
+.butt {
+    background-color: #1ed760
+}
+
+a {
+    padding-left: 10px;
+}
+
+hover:a {
+    text-color: #1ed760
+}
