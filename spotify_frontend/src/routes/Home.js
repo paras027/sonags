@@ -191,7 +191,7 @@ const Card = ({ title, description, imgUrl, songplay }) => {
             <div className='flex w-full justify-between h-20 mt-3'>
                 <div className='justify-start ml-3 cursor-pointer' onClick={async function () { setLike(!like)
 
-                    const res = await axios.put('http://localhost:8000/addsong', {
+                    const res = await axios.put('https://sonags-backend.onrender.com/addsong', {
                         songname: title,
                         thumbnail: imgUrl,
                         likes: description,
