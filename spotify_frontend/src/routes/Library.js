@@ -4,7 +4,9 @@ import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faStop } from '@fortawesome/free-solid-svg-icons';
+import { faStop,faHouse,faBook, faPlay, faHeart, faShieldHeart } from '@fortawesome/free-solid-svg-icons';
+import { faSpotify } from '@fortawesome/free-brands-svg-icons';
+import './Home.css';
 
 const Library = ({ setToken }) => {
     const token = localStorage.getItem('token');
@@ -25,6 +27,7 @@ const Library = ({ setToken }) => {
                     'Authorization': token
                 }
             });
+            console.log(response);
             const fetchedSongs = response.data.datagot.values;
             setSongs(fetchedSongs);
         }
@@ -32,28 +35,42 @@ const Library = ({ setToken }) => {
     }, [token]);
 
     return (
-        <div className="h-screen w-screen flex">
-            <div className="bg-black flex flex-col justify-between h-full w-1/5 md:w-1/4 lg:w-1/6">
-                <div>
-                    <div className='logo px-5 py-7'>
-                        <Icon icon="logos:spotify" width="150" />
-                    </div>
-                    <div>
-                        <SideTexts icons="teenyicons:home-outline" nameicon="Home" path="/home" />
-                        <SideTexts icons="ion:library-outline" nameicon="Library" path="/library" active />
-                        <SideTexts icons="solar:chat-square-like-linear" nameicon="Liked Songs" path="/likedsongs" />
-                    </div>
-                </div>
-                <div className='px-5 pb-5'>
-                    <div className='border border-gray-300 text-white w-2/5 flex px-2 py-1 rounded-full items-center justify-center'>
-                        <Icon icon="carbon:earth-europe-africa" />
-                        <div className='ml-2'>English</div>
-                    </div>
-                    <div className='font-bold text-lg cursor-pointer text-gray-400 hover:text-white mt-5' onClick={handleLogoutButton}>
-                        Logout
-                    </div>
-                </div>
+        <div className='bg-black flex'>
+        <div className="  flex flex-col justify-between h-screen ww mm w-screen md:w-1/5 lg:w-1/6 ">
+        <div className='flex flex-col space-y-8'>
+        <div className=' sm:ml-5 flex space-x-2 md:text-xl mt-8'>
+        <div className='text-green-500 sm:text-5xl'><FontAwesomeIcon icon={faSpotify} /></div>
+        <div className='text-gray-400 hidden md:block mt-2 ' class>Spotify</div>
+        </div>
+        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+            navigate('/home')
+        }}>
+        <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faHouse} /></div>
+        <div className=' text-gray-400 hidden md:block pt-2'> Home </div>
+        </div>
+        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+            navigate('/library')
+        }}>
+        <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faBook} /></div>
+        <div className=' text-gray-400 hidden md:block pt-2'> Library </div>
+        </div>
+        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+            navigate('/likedsongs')
+        }}>
+        <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faShieldHeart} /></div>
+        <div className=' text-gray-400 hidden md:block '> Liked Songs </div>
+        </div>
+            
+        </div>
+        <div className='px-5 pb-5 hidden md:block'>
+            <div className='border border-gray-300 text-white w-full flex px-2 py-1 rounded-full items-center justify-center'>
+                <Icon icon="carbon:earth-europe-africa" />
+                <div className='ml-2'>English</div>
             </div>
+        </div>
+    </div>
+    
+    {/* Right Content Area */}
             <div className="h-full w-full bg-gradient-to-b from-zinc-900 to-black">
                 <div className='bg-black bg-opacity-30 w-full flex items-center justify-end px-5 py-7'>
                     {/* Any content you want to add */}

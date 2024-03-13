@@ -15,12 +15,12 @@ function SignUp({ setToken }) {
     const navigate = useNavigate();
 
     return (
-        <div className='flex items-center justify-center flex-col'>
-            <div className='FullWindow bg-white flex items-center flex-col justify-center'>
+        <div className='flex items-center justify-center flex-col w-screen'>
+            <div className='w-full bg-white flex items-center flex-col justify-center'>
                 <div className='logo p-5 py-7 bg-white '>
                     <a href='/home'><Icon icon="logos:spotify" width="150" /></a>
                 </div>
-                <div className='pt-4 text-black text-2xl font-bold'>
+                <div className=' p-5 pl-10 text-black text-2xl font-bold'>
                     Sign up for free to start listening.
                 </div>
                 <div className='text-black w-10/12'>
@@ -33,7 +33,7 @@ function SignUp({ setToken }) {
                         <button className='w-full butt font-semibold p-3 px-10 rounded-full' onClick={async () => {
                             try {
                                 const data = { email, password, firstname, lastname, username };
-                                const resp = await axios.post("https://sonags-backend.onrender.com/register", data);
+                                const resp = await axios.post("http://localhost:8000/register", data);
                                 localStorage.setItem("token", resp.data);
                                 setToken(resp.data);
                                 navigate("/home");

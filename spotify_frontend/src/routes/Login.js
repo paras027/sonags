@@ -19,9 +19,9 @@ function Login({ setToken }) {
                 </a>
             </div>
             <div className='w-full p-8 flex items-center justify-center flex-col'>
-                <div className='w-full inputRegion flex items-center justify-center flex-col bg-black  rounded-lg'>
-                    <h1 className="font-bold mt-12 mb-12 text-white text-3xl md:text-5xl my-8 w-max">Log in to Spotify</h1>
-                    <div className=' w-max text-white'>
+                <div className='w-full p-5 inputRegion flex items-center justify-center flex-col bg-black  rounded-lg'>
+                    <h1 className="font-bold mt-12 mb-12 text-white text-2xl md:text-5xl my-8 ">Log in to Spotify</h1>
+                    <div className='  text-white'>
                         <TextInput label="Email ID or Username" placeholder="Email ID or Username" color="bg-black" value={email} setvalue={setEmail} />
                         <Password label="Password" placeholder="Password" color="bg-black" value={password} setvalue={setPassword} />
                         <div className='w-full my-8'>
@@ -29,7 +29,7 @@ function Login({ setToken }) {
                                 try {
                                     console.log("Login");
                                     const data = { email, password };
-                                    const resp = await axios.post("https://sonags-backend.onrender.com/login", data);
+                                    const resp = await axios.post("http://localhost:8000/login", data);
                                     localStorage.setItem("token", resp.data);
                                     setToken(resp.data);
                                     navigate("/home");

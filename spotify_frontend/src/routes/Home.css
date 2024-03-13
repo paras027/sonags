@@ -1,15 +1,12 @@
-.damn {
-    width: 300px;
-}
 
-.damn2 {
-    width: 1100px;
-}
 
 .hh {
     height: 70px;
 }
-
+.h-screen {
+    height: 100vh; /* Ensure the container takes up the full height of the viewport */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
 .card:hover {
     transform: scale(1.1);
     z-index: 1;
@@ -19,3 +16,29 @@
     transition: transform 0.5s;
 
 }
+@media (max-width: 767px) { .ww{
+    width: 12%;
+} }
+@media (max-width: 640px) {
+    .ww{
+        width: 8%;
+        
+    }
+    .mf{
+        margin-right: 100%;
+    }
+    .mm{
+        margin-left: 2%;
+        font-size: 180%;
+    } 
+ }
+ @media (max-width: 411px) {
+    .ww{
+        width: 7%;
+        
+    }
+    .mm{
+        margin-left: 2%;
+        font-size: 100%;
+    } 
+ }
