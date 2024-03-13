@@ -33,7 +33,7 @@ function SignUp({ setToken }) {
                         <button className='w-full butt font-semibold p-3 px-10 rounded-full' onClick={async () => {
                             try {
                                 const data = { email, password, firstname, lastname, username };
-                                const resp = await axios.post("http://localhost:8000/register", data);
+                                const resp = await axios.post("https://sonags-backend.onrender.com/register", data);
                                 localStorage.setItem("token", resp.data);
                                 setToken(resp.data);
                                 navigate("/home");

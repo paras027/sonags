@@ -29,7 +29,7 @@ function Login({ setToken }) {
                                 try {
                                     console.log("Login");
                                     const data = { email, password };
-                                    const resp = await axios.post("http://localhost:8000/login", data);
+                                    const resp = await axios.post("https://sonags-backend.onrender.com/login", data);
                                     localStorage.setItem("token", resp.data);
                                     setToken(resp.data);
                                     navigate("/home");
