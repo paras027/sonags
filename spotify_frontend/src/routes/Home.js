@@ -65,22 +65,22 @@ const Home = ({ setToken }) => {
                     <div className='text-green-500 sm:text-5xl'><FontAwesomeIcon icon={faSpotify} /></div>
                     <div className='text-gray-400 hidden md:block mt-2 ' class>Spotify</div>
                     </div>
-                    <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+                    <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2 hover:text-white cursor-pointer' onClick={function(){
                         navigate('/home')
                     }}>
-                    <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faHouse} /></div>
-                    <div className=' text-gray-400 hidden md:block pt-2'> Home </div>
+                    <div className='text-gray-500 sm:text-4xl '><FontAwesomeIcon icon={faHouse} /></div>
+                    <div className=' text-gray-400 hidden md:block pt-2 '> Home </div>
                     </div>
-                    <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+                    <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2 hover:text-white cursor-pointer' onClick={function(){
                         navigate('/library')
                     }}>
-                    <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faBook} /></div>
-                    <div className=' text-gray-400 hidden md:block pt-2'> Library </div>
+                    <div className='text-gray-500 sm:text-4xl '><FontAwesomeIcon icon={faBook} /></div>
+                    <div className=' text-gray-400 hidden md:block pt-2 '> Library </div>
                     </div>
-                    <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+                    <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2 hover:text-white cursor-pointer' onClick={function(){
                         navigate('/likedsongs')
                     }}>
-                    <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faShieldHeart} /></div>
+                    <div className='text-gray-500 sm:text-4xl '><FontAwesomeIcon icon={faShieldHeart} /></div>
                     <div className=' text-gray-400 hidden md:block '> Liked Songs </div>
                     </div>
                     
