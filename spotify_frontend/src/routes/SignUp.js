@@ -18,8 +18,8 @@ function SignUp({ setToken }) {
     return (
         <div className='flex items-center justify-center flex-col w-screen'>
             <div className='w-full bg-white flex items-center flex-col justify-center'>
-                <div className='logo p-5 py-7 bg-white '>
-                    <a href='/home'><Icon icon="logos:spotify" width="150" /></a>
+                <div className='logo p-5 py-7 bg-white text-black text-2xl font-bold'>
+                    <a href='/home'>MusicPlay</a>
                 </div>
                 <div className=' p-5 pl-10 text-black text-2xl font-bold'>
                     Sign up for free to start listening.

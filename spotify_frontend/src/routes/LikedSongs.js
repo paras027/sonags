@@ -44,22 +44,22 @@ const LikedSongs = ({ setToken }) => {
         <div className="  flex flex-col justify-between h-screen ww mm w-screen md:w-1/5 lg:w-1/6 ">
         <div className='flex flex-col space-y-8'>
         <div className=' sm:ml-5 flex space-x-2 md:text-xl mt-8'>
-        <div className='text-green-500 sm:text-5xl'><FontAwesomeIcon icon={faSpotify} /></div>
-        <div className='text-gray-400 hidden md:block mt-2 ' class>Spotify</div>
+        <div className='text-green-500 sm:text-5xl text-2xl font-bold'>MusicPlay</div>
+                    <div className='text-gray-400 hidden md:block mt-2 ' class>MusicPlay</div>
         </div>
-        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2 cursor-pointer' onClick={function(){
             navigate('/home')
         }}>
         <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faHouse} /></div>
         <div className=' text-gray-400 hidden md:block pt-2'> Home </div>
         </div>
-        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2 cursor-pointer' onClick={function(){
             navigate('/library')
         }}>
         <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faBook} /></div>
         <div className=' text-gray-400 hidden md:block pt-2'> Library </div>
         </div>
-        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2' onClick={function(){
+        <div className='sm:ml-5 flex  space-x-2 md:text-xl mt-2 cursor-pointer' onClick={function(){
             navigate('/likedsongs')
         }}>
         <div className='text-gray-500 sm:text-4xl hover:text-white'><FontAwesomeIcon icon={faShieldHeart} /></div>
