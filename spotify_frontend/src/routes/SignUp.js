@@ -13,6 +13,7 @@ function SignUp({ setToken }) {
     const [lastname, setLastname] = useState("");
     const [username, setUsername] = useState("");
     const navigate = useNavigate();
+    
 
     return (
         <div className='flex items-center justify-center flex-col w-screen'>

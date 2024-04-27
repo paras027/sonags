@@ -14,6 +14,7 @@ const Home = ({ setToken }) => {
     const navigate = useNavigate();
     const [value, setValue] = useState("");
 
+    
     const handleLogoutButton = () => {
         setToken(null);
         localStorage.removeItem('token');

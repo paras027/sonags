@@ -13,7 +13,8 @@ const jwtpass = "123"
  app.use(cors());
  const bcrypt = require("bcrypt");
 
-
+ var axios = require('axios');
+ var cron = require('node-cron');
 require("dotenv").config();
 //if we want to make something like password private then we can write it in an env file and save it
 const port = 8000;
@@ -144,6 +145,16 @@ app.get('/getlikedsongs', async (req, res) => {
 // app.use("/song", Song);
 // app.use("/playlist", Playlistt);
 //Now we will tell express that our server will ru on localhost:8000
+
+cron.schedule('*/10 * * * *', function() {
+    axios.get('https://sonags-backend.onrender.com')
+      .then(function (response) {
+        console.log('Self ping successful');
+      })
+      .catch(function (error) {
+        console.log('Self ping failed: ', error);
+      });
+  });
 app.listen(port, () => {
     console.log("App is running on port: " + port);
 });
